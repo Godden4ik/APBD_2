@@ -3,9 +3,6 @@ namespace APBD_2
     public abstract class Container
     {
         private static int _id = 0;
-        public static string ContainerType;
-        
-        
         protected Container(string serialNumber, double cargoMass, double height, double tareWeight, double depth, double maxPayload)
         {
             SerialNumber = serialNumber;
@@ -27,7 +24,7 @@ namespace APBD_2
         public abstract void EmptyCargo();
         protected static string GenerateSerialNumber(string type) {
             //implementation of generation of unique number for each container [ids have to be unique]
-            return $"KON-{type}-{_id++}";
+            return $"KON-{type}-{++_id}";
         }
     }
 }

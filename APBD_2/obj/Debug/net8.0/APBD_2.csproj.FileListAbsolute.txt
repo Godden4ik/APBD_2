@@ -12,3 +12,18 @@
 /Users/godden4ik/RiderProjects/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.pdb
 /Users/godden4ik/RiderProjects/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.genruntimeconfig.cache
 /Users/godden4ik/RiderProjects/APBD_2/APBD_2/obj/Debug/net8.0/ref/APBD_2.dll
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/bin/Debug/net8.0/APBD_2
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/bin/Debug/net8.0/APBD_2.deps.json
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/bin/Debug/net8.0/APBD_2.runtimeconfig.json
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/bin/Debug/net8.0/APBD_2.dll
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/bin/Debug/net8.0/APBD_2.pdb
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.AssemblyInfoInputs.cache
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.AssemblyInfo.cs
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.csproj.CoreCompileInputs.cache
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.sourcelink.json
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.dll
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/refint/APBD_2.dll
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.pdb
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/APBD_2.genruntimeconfig.cache
+/Users/godden4ik/Documents/PJATK 4 semester/APBD/APBD_2/APBD_2/obj/Debug/net8.0/ref/APBD_2.dll

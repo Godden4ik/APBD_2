@@ -12,21 +12,13 @@ namespace APBD_2
 
         public override void LoadCargo(double mass)
         {
-            if (IsHazardous)
-            {
-                NotifyHazard("ITS GONNA EXPLODE!!!");
-                if (mass > MaxPayload * 0.5)
-                    throw new OverfillException("TOO MUCH HAZARDOUS LIQUID!!!");
-                CargoMass = mass;
-                return;
-            }
-
             if(mass>MaxPayload * 0.9)
-            {
-                throw new OverfillException("TOO MUCH LIQUID");
-            }
+                throw new OverfillException("TOO MUCH LIQUID!!!");
+
+            if (IsHazardous && mass > MaxPayload * 0.5)
+                NotifyHazard("DANGEROUS SITUATION!!!");
+            
             CargoMass = mass;
-            return;
         }
 
         public override void EmptyCargo()
@@ -36,6 +28,7 @@ namespace APBD_2
 
         public void NotifyHazard(string message)
         {
+            Console.Write(SerialNumber + ": ");
             Console.WriteLine(message);
         }
     }

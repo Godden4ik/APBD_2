@@ -26,5 +26,11 @@ namespace APBD_2
             //implementation of generation of unique number for each container [ids have to be unique]
             return $"KON-{type}-{++_id}";
         }
+
+        public override string ToString()
+        {
+            return $"{SerialNumber}: Cargo mass: {CargoMass} kg, Tare weight: {TareWeight} kg, " +
+                   $"Height: {Height} cm, Depth: {Depth} cm, Max Payload: {MaxPayload} kg, ";
+        }
     }
 }

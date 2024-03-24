@@ -11,14 +11,18 @@ RefrigeratedContainer rc = new RefrigeratedContainer(0, 100, 100, 50, 1000, "Ban
 
 
 lc.LoadCargo(600);
-try
-{
-    gc.LoadCargo(1000000000);
-}
-catch (Exception e)
-{
-    Console.WriteLine("Everythin's fine, there's nothin' of interest 'ere");
-}
+gc.LoadCargo(500);
 rc.Temperature = 15;
 
+ContainerShip ship = new ContainerShip(30, 100, 20000);
 
+ship.AddContainer(lc);
+ship.AddContainer(gc);
+ship.AddContainer(rc);
+
+ship.LoadContainerCargo("KON-L-1", 900);
+
+Console.WriteLine(rc);
+
+ContainerShipController containerShipController = new ContainerShipController();
+containerShipController.ShipMenu();

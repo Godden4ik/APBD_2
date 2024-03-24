@@ -9,10 +9,12 @@ public class GasContainer : Container, IHazardNotifier
 
     public override void LoadCargo(double mass)
     {
+        NotifyHazard("Pressurised gas, proceed with caution.");
+        
         if (mass > 0.9 * MaxPayload)
         {
-            NotifyHazard("OH LAWD");
-            throw new OverfillException("THE GAS,  IT'S TOO MUCH!!!");
+            
+            throw new OverfillException("THE GAS, IT'S TOO MUCH!!!");
         }
 
         CargoMass = mass;
@@ -25,7 +27,7 @@ public class GasContainer : Container, IHazardNotifier
 
     public void NotifyHazard(string message)
     {
-        Console.Write(SerialNumber + ": ");
+        Console.WriteLine(SerialNumber + ": " + message);
         
     }
 }

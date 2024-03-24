@@ -16,20 +16,24 @@ namespace APBD_2
                 throw new OverfillException("TOO MUCH LIQUID!!!");
 
             if (IsHazardous && mass > MaxPayload * 0.5)
-                NotifyHazard("DANGEROUS SITUATION!!!");
+                NotifyHazard("Hazardous liquid, approaching splash zone, proceed with caution.");
             
             CargoMass = mass;
         }
 
         public override void EmptyCargo()
         {
-            throw new NotImplementedException();
+            CargoMass = 0;
         }
 
         public void NotifyHazard(string message)
         {
-            Console.Write(SerialNumber + ": ");
-            Console.WriteLine(message);
+            Console.WriteLine(SerialNumber + ": " + message);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $" Hazardous: {IsHazardous}";
         }
     }
 }

@@ -4,11 +4,11 @@ namespace APBD_2
 {
     public class ContainerShipController
     {
-        private List<ContainerShip> _ships;
         private ContainerShip _ship;
 
-        public ContainerShipController()
+        public ContainerShipController(ContainerShip ship)
         {
+            _ship = ship;
         }
 
         public void MainMenu()
@@ -25,7 +25,7 @@ namespace APBD_2
                 Console.WriteLine("7. Display available containers");
                 Console.WriteLine("8. Exit");
                 Console.WriteLine("Enter your choice:");
-
+                
                 int choice;
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
@@ -66,67 +66,6 @@ namespace APBD_2
                 }
             }
         }
-
-        public void ShipMenu()
-        {
-            bool exit = false;
-            if (_ships == null)
-            {
-                Console.WriteLine("No ships available.");
-            } else
-                foreach (var ship in _ships)
-                {
-                    Console.WriteLine(ship);
-                }
-            
-            while (!exit) 
-            {
-                Console.WriteLine("1. Select Ship");
-                Console.WriteLine("2. Add ship");
-                Console.WriteLine("3. Exit");
-
-                int choice;
-                if (int.TryParse(Console.ReadLine(), out choice))
-                {
-                    switch (choice)
-                    {
-                        case 1:
-                            Console.WriteLine("Enter a ship's id");
-                            int id;
-                            int.TryParse(Console.ReadLine(), out id);
-
-                            _ship = _ships.Find(ship => ship.Id == id);
-                            MainMenu();
-                            break;
-                        case 2:
-                            Console.Write("Enter the maximum speed of the ship: ");
-                            int maxSpeed = int.Parse(Console.ReadLine());
-
-                            Console.Write("Enter the maximum number of containers the ship can hold: ");
-                            int maxContainerNumber = int.Parse(Console.ReadLine());
-
-                            Console.Write("Enter the maximum weight the ship can carry: ");
-                            double maxWeight = double.Parse(Console.ReadLine());
-                            
-                            ContainerShip ship = new ContainerShip(maxSpeed, maxContainerNumber, maxWeight);
-                            
-                            _ships.Add(ship);
-                            break;
-                        case 3:
-                            exit = true;
-                            break;
-                        default:
-                            Console.WriteLine("Invalid choice. Please try again.");
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter a number.");
-                }
-            }
-        }
-        
 
         private Container CreateContainer()
         {

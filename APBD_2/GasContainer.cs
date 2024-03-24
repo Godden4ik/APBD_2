@@ -14,7 +14,7 @@ public class GasContainer : Container, IHazardNotifier
         if (mass > 0.9 * MaxPayload)
         {
             
-            throw new OverfillException("THE GAS, IT'S TOO MUCH!!!");
+            throw new OverfillException("Too much gas!");
         }
 
         CargoMass = mass;

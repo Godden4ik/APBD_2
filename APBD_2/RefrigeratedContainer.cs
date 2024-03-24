@@ -84,7 +84,7 @@ namespace APBD_2
         {
             if (mass > MaxPayload)
             {
-                throw new OverfillException("TOO MUCH CARGO");
+                throw new OverfillException("Too much cargo!");
             }
 
             CargoMass = mass;

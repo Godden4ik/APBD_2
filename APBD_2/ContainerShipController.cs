@@ -20,10 +20,9 @@ namespace APBD_2
                 Console.WriteLine("2. Load Container Cargo");
                 Console.WriteLine("3. Empty Container Cargo");
                 Console.WriteLine("4. Replace Container");
-                Console.WriteLine("5. Transfer Container");
-                Console.WriteLine("6. Remove Container");
-                Console.WriteLine("7. Display available containers");
-                Console.WriteLine("8. Exit");
+                Console.WriteLine("5. Remove Container");
+                Console.WriteLine("6. Display available containers");
+                Console.WriteLine("7. Exit");
                 Console.WriteLine("Enter your choice:");
                 
                 int choice;
@@ -32,7 +31,7 @@ namespace APBD_2
                     switch (choice)
                     {
                         case 1:
-                            _ship.Containers.Add(CreateContainer());
+                            _ship.AddContainer(CreateContainer());
                             break;
                         case 2:
                             LoadContainerCargo();
@@ -44,15 +43,12 @@ namespace APBD_2
                             ReplaceContainer();
                             break;
                         case 5:
-                            TransferContainer();
-                            break;
-                        case 6:
                             RemoveContainer();
                             break;
-                        case 7:
+                        case 6:
                             _ship.DisplayAllContainers();
                             break;
-                        case 8:
+                        case 7:
                             exit = true;
                             break;
                         default:
@@ -183,19 +179,9 @@ namespace APBD_2
         {
             Console.WriteLine("Enter container serial number to replace:");
             string oldSerialNumber = Console.ReadLine();
-            _ship.RemoveContainer(oldSerialNumber);
-            Console.WriteLine("Create a container to replace the old one.");
-            _ship.Containers.Add(CreateContainer());
+            _ship.ReplaceContainer(oldSerialNumber, CreateContainer());
         }
-
-        private void TransferContainer()
-        {
-            Console.WriteLine("Enter container serial number to transfer:");
-            string serialNumber = Console.ReadLine();
-
-            _ship.TransferContainer(serialNumber);
-        }
-
+        
         private void RemoveContainer()
         {
             Console.WriteLine("Enter container serial number to remove:");

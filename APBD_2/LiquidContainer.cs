@@ -13,7 +13,7 @@ namespace APBD_2
         public override void LoadCargo(double mass)
         {
             if(mass>MaxPayload * 0.9)
-                throw new OverfillException("TOO MUCH LIQUID!!!");
+                throw new OverfillException("Liquid overfill!");
 
             if (IsHazardous && mass > MaxPayload * 0.5)
                 NotifyHazard("Hazardous liquid, approaching splash zone, proceed with caution.");

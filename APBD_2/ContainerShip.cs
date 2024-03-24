@@ -30,7 +30,7 @@ namespace APBD_2;
 
             if (newMass > MaxWeight)
             {
-                Console.WriteLine($"The container {container.SerialNumber} is too MASSive for this ship.");
+                Console.WriteLine($"The container {container.SerialNumber} exceeds the maximum payload for this ship.");
                 return;
             }
 
@@ -62,13 +62,6 @@ namespace APBD_2;
         {
             Containers.Remove(FindContainerBySerialNumber(serialNumber));
             Containers.Add(container);
-        }
-
-        public Container TransferContainer(string serialNumber)
-        {
-            Container container = FindContainerBySerialNumber(serialNumber);
-            Containers.Remove(container);
-            return container;
         }
 
         public Container FindContainerBySerialNumber(string serialNumber)
